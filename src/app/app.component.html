@@ -1,0 +1,13 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div style="text-align:center">
+  <h1>Moje złote myśli</h1>
+  </div>
+  <ul>
+    <li *ngFor="let thought of thoughts; let i = index">{{thought}}
+      <button (click) = "removeThought(i)">Usuń</button>
+    </li>
+  </ul>
+  <input  type="text" [value]="text" (input)="text = $event.target.value">
+  <button (click)="addThought()">Dodaj</button>
+
+<router-outlet></router-outlet>
